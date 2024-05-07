@@ -5,8 +5,9 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface LoginBodySchema {
-  username: string;
-  password: string;
+export interface TriggerBodySchema {
+  actions: {
+    [k: string]: unknown;
+  }[];
   [k: string]: unknown;
 }

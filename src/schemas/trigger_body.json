@@ -1,0 +1,13 @@
+{
+  "title": "Trigger Body Schema",
+  "type": "object",
+  "properties": {
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": ["actions"]
+}

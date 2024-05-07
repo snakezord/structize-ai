@@ -1,6 +1,6 @@
 import fp from 'fastify-plugin'
 
-import type { fastifyEnvOpt } from '@fastify/env'
+import type { FastifyEnvOptions } from '@fastify/env'
 import env from '@fastify/env'
 
 const schema = {
@@ -25,6 +25,6 @@ const options = {
  *
  * @see https://github.com/fastify/fastify-env
  */
-export default fp<fastifyEnvOpt>(async (fastify) => {
+export default fp<FastifyEnvOptions>(async (fastify) => {
   await fastify.register(env, options)
 })

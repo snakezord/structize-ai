@@ -15,7 +15,15 @@ dotenv.config()
 const isProduction = process.env.NODE_ENV === 'production'
 // Instantiate Fastify with some config
 const server = Fastify({
-  logger: !isProduction,
+  logger: !isProduction && {
+    transport: {
+      target: "pino-pretty",
+      options: {
+        translateTime: "HH:MM:ss Z",
+        ignore: "pid,hostname",
+      },
+    },
+  },
 })
 
 // Register your application as a normal plugin.

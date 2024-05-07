@@ -2,7 +2,10 @@
   "name": "fastify-starter",
   "version": "0.3.0",
   "description": "Fastify Typescript Starter",
-  "keywords": ["fastify", "fastify-starter"],
+  "keywords": [
+    "fastify",
+    "fastify-starter"
+  ],
   "license": "MIT",
   "author": "Huynh Duc Dung",
   "main": "app.ts",
@@ -32,6 +35,7 @@
     "@fastify/env": "4.3.0",
     "@fastify/etag": "5.2.0",
     "@fastify/helmet": "11.1.1",
+    "@fastify/mongodb": "^8.0.0",
     "@fastify/multipart": "8.2.0",
     "@fastify/rate-limit": "9.1.0",
     "@fastify/sensible": "5.6.0",
@@ -84,11 +88,16 @@
     "node": ">=18.17.0"
   },
   "tsup": {
-    "entry": ["src/**/*.ts"],
+    "entry": [
+      "src/**/*.ts"
+    ],
     "splitting": false,
     "sourcemap": true,
     "clean": true,
-    "format": ["cjs", "esm"],
+    "format": [
+      "cjs",
+      "esm"
+    ],
     "legacyOutput": true,
     "target": "es2018",
     "onSuccess": "npm run copy:assets"
