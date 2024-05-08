@@ -33,6 +33,18 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "nodes": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  },
+                  "edges": {
+                    "type": "array",
+                    "items": {
+                      "type": "object"
+                    }
+                  },
                   "actions": {
                     "type": "array",
                     "items": {

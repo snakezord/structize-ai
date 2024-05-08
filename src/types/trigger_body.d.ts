@@ -6,6 +6,12 @@
  */
 
 export interface TriggerBodySchema {
+  nodes: {
+    [k: string]: unknown;
+  }[];
+  edges: {
+    [k: string]: unknown;
+  }[];
   actions: {
     [k: string]: unknown;
   }[];
