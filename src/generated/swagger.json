@@ -20,7 +20,21 @@
         }
       }
     },
-    "/user/trigger": {
+    "/nodes-edges": {
+      "get": {
+        "tags": [
+          "Nodes",
+          "Edges"
+        ],
+        "description": "Returns nodes and edges",
+        "responses": {
+          "200": {
+            "description": "nodes and edges as Object {nodes, edges}"
+          }
+        }
+      }
+    },
+    "/trigger": {
       "post": {
         "tags": [
           "Triggers",
@@ -106,6 +120,10 @@
     {
       "name": "Example",
       "description": "Hello world end point"
+    },
+    {
+      "name": "NodesEdges",
+      "description": "Responsible for querying nodes and edges"
     },
     {
       "name": "Trigger",

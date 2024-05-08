@@ -8,7 +8,7 @@ import type { TriggerNode } from '../../types/trigger'
 import type { TriggerBodySchema } from '../../types/trigger_body'
 import { saveNodesAndEdges } from '../../utils/db/save-nodes-and-edges'
 
-const user: FastifyPluginAsync = async (fastify, _opts): Promise<void> => {
+const trigger: FastifyPluginAsync = async (fastify, _opts): Promise<void> => {
   // Refer https://swagger.io/docs/specification/describing-request-body/
   /**
    * @swagger
@@ -19,7 +19,7 @@ const user: FastifyPluginAsync = async (fastify, _opts): Promise<void> => {
 
   /**
    * @swagger
-   * /user/trigger:
+   * /trigger:
    *   post:
    *     tags: [Triggers, Actions]
    *     requestBody:
@@ -83,4 +83,4 @@ const user: FastifyPluginAsync = async (fastify, _opts): Promise<void> => {
   )
 }
 
-export default user
+export default trigger
