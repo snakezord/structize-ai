@@ -13,7 +13,7 @@ COPY package.json pnpm-lock.yaml tsconfig.json ./
 COPY src src
 
 # Install dependencies and build
-RUN npm install -g pnpm
+RUN npm install -g pnpm@9.0.6
 RUN pnpm install
 ENV NODE_ENV=production
 RUN pnpm run build
@@ -25,7 +25,7 @@ WORKDIR /app
 # Copy build output from builder
 COPY --from=builder /app .
 
-# Expose port for health check with fly.io
+# Expose port for health check
 EXPOSE 3000/tcp
 
 # Set SERVER_HOSTNAME environment variable

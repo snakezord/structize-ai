@@ -1,4 +1,3 @@
-# flyctl launch added from .gitignore
 # Logs
 **/logs
 **/*.log
@@ -71,20 +70,3 @@
 
 # Eslint cache
 **/.eslintcache
-
-# flyctl launch added from .husky/.gitignore
-.husky/**/_
-
-# flyctl launch added from .husky/_/.gitignore
-.husky/_/**/*
-
-# flyctl launch added from node_modules/jaeger-client/dist/src/jaeger-idl/.gitignore
-node_modules/jaeger-client/dist/src/jaeger-idl/**/.idea
-node_modules/jaeger-client/dist/src/jaeger-idl/**/gen-go
-node_modules/jaeger-client/dist/src/jaeger-idl/**/gen-java
-node_modules/jaeger-client/dist/src/jaeger-idl/**/gen-nodejs
-node_modules/jaeger-client/dist/src/jaeger-idl/**/gen-py.tornado
-
-# flyctl launch added from src/.gitignore
-src/**/generated/*.ts
-fly.toml
