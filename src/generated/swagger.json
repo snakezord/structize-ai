@@ -7,6 +7,21 @@
   },
   "host": "0.0.0.0:3000",
   "paths": {
+    "/auth/google/callback": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "description": "Google login callback"
+        },
+        "responses": {
+          "200": {
+            "description": "google callback success with token"
+          }
+        }
+      }
+    },
     "/example": {
       "get": {
         "tags": [
@@ -79,40 +94,6 @@
           }
         }
       }
-    },
-    "/user/login": {
-      "post": {
-        "tags": [
-          "Users"
-        ],
-        "requestBody": {
-          "description": "Login to the application",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "username": {
-                    "type": "string"
-                  },
-                  "password": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "username",
-                  "password"
-                ]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "login success with token"
-          }
-        }
-      }
     }
   },
   "components": {},
@@ -128,10 +109,6 @@
     {
       "name": "Trigger",
       "description": "Responsible for handling triggers and executing actions"
-    },
-    {
-      "name": "Users",
-      "description": "User management and login"
     }
   ]
 }
