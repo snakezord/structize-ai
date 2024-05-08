@@ -19,6 +19,8 @@
 pnpm install
 ```
 
+#### Create ```.env``` with copy of ```.env.example```
+
 ## Run locally with hot reload
 
 ```sh

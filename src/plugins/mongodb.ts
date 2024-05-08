@@ -9,8 +9,6 @@ export const mongoDbPlugin = async (
   fastify: FastifyInstance,
   opts: FastifyMongodbOptions,
 ) => {
-  console.log(process.env.MONGO_URI)
-
   await fastify.register(mongodb, {
     forceClose: true,
     url: process.env.MONGO_URI,

@@ -17,7 +17,7 @@ services:
       context: .
       dockerfile: Dockerfile
     labels:
-      - "traefik.http.routers.fastify-app.rule=Host(`fastify-starter.traefik.me`)"
+      - "traefik.http.routers.fastify-app.rule=Host(`structize-api.traefik.me`)"
       - "traefik.http.services.fastify-app.loadbalancer.server.port=3000"
     environment:
       NODE_ENV: production
